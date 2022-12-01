@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Acerca from "../pages/Acerca";
+import Contacto from "../pages/Contacto";
 
 const Home = () => {
     return(
@@ -10,23 +12,24 @@ const Home = () => {
     )
 }
 
-const Acerca = () => {
+/*const About = () => {
     return(
         <>
-        <h3>Acerca</h3>
-        <p>Contenido de Acerca</p>
+        <Acerca/>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rem deleniti facilis fuga ipsum quaerat laudantium architecto earum ullam natus tempore fugit, velit impedit non. Numquam molestias placeat omnis vel?</p>
         </>
     )
 }
 
-const Contacto = () => {
+const Contact = () => {
     return(
         <>
+        <Contacto/>
         <h3>Contacto</h3>
         <p>Contenido de contacto</p>
         </>
     )
-}
+}*/
 
 
 const ConceptosBasicos = () => {
