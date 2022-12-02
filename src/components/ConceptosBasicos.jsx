@@ -5,6 +5,7 @@ import Contacto from "../pages/Contacto";
 import Home from "../pages/Home";
 import Error404 from "../pages/Error404";
 import MenuConceptos from "./MenuConceptos";
+import Usuario from "../pages/Usuario";
 
 /*const Inicio = () => {
     return(
@@ -44,6 +45,8 @@ const ConceptosBasicos = () => {
           <Route path="/" element={<Home />} />
           <Route path="/acerca" element={<Acerca />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/usuario/:username" element={<Usuario/>} />
+          {/* /: son parámetros que react dinámicamente podrá cambiar */}
           <Route path="*" element={<Error404 />} />
           {/* El error siempre va posicionado último por tema cascada */}
         </Routes>

@@ -26,6 +26,12 @@ const MenuConceptos = () => {
            <NavLink to="/contacto" activeclassname="active">Contacto</NavLink>
            <NavLink to="/no-existe" activeclassname="active">Error404</NavLink>
         </li>
+
+        <li>
+            <span>Parámetros: </span>
+            <Link to="/usuario/estela">Estela</Link>
+            <Link to="/usuario/manuel">Manuel</Link>
+        </li>
       </ol>
     </nav>
   );
