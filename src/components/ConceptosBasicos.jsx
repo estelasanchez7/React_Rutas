@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Navigate, Routes, Route } from "react-router-dom";
 import Acerca from "../pages/Acerca";
 import Contacto from "../pages/Contacto";
 import Home from "../pages/Home";
@@ -49,6 +49,8 @@ const ConceptosBasicos = () => {
           <Route path="/usuario/:username" element={<Usuario/>} />
           {/* /: son parámetros que react dinámicamente podrá cambiar */}
           <Route path="/productos" element={<Productos/>} />
+          <Route path="/about" element={<Navigate to="/acerca" />} />
+          <Route path="/contact" element={<Navigate to="/contacto"/>} />
           <Route path="*" element={<Error404 />} />
           {/* El error siempre va posicionado último por tema cascada */}
         </Routes>
