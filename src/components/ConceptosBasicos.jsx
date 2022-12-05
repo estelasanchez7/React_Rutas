@@ -4,6 +4,8 @@ import {
   Navigate,
   Routes,
   Route,
+  HashRouter,
+  Link,
 } from "react-router-dom";
 import Acerca from "../pages/Acerca";
 import Contacto from "../pages/Contacto";
@@ -49,9 +51,39 @@ const Contact = () => {
     )
 }*/
 
+/* HASH ROUTER */
 const ConceptosBasicos = () => {
   return (
     <div>
+      <h2>Hash Router</h2>
+      <HashRouter>
+      <MenuConceptos />
+        <Routes>
+        <Route path="/" element={<Home />} />
+          <Route path="/acerca" element={<Acerca />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/usuario/:username" element={<Usuario />} />
+          {/* /: son parámetros que react dinámicamente podrá cambiar */}
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/about" element={<Navigate to="/acerca" />} />
+          <Route path="/contact" element={<Navigate to="/contacto" />} />
+          <Route path="/react/" element={<ReactTopics />}>
+            <Route path=":jsx" element={<JsxPage />} />
+            <Route path=":estado" element={<Estado />} />
+            <Route path=":componentes" element={<ComponentesPage />} />
+            <Route path=":props" element={<Props />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
+          <Route path="*" element={<Error404 />} />
+          {/* El error siempre va posicionado último por tema cascada */}
+      </Routes>
+      </HashRouter>
+
+    {/* NORMAL ROUTER */}
+      <hr />
       <h2>Conceptos Básicos</h2>
       <Router>
         <MenuConceptos />
