@@ -17,6 +17,9 @@ import JsxPage from "../pages/JsxPage";
 import Estado from "../pages/Estado";
 import Props from "../pages/Props";
 import ComponentesPage from "../pages/ComponentesPage";
+import Login from "../pages/Login";
+import Dashboard from "../pages/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 
 /*const Inicio = () => {
     return(
@@ -66,6 +69,10 @@ const ConceptosBasicos = () => {
             <Route path=":estado" element={<Estado />} />
             <Route path=":componentes" element={<ComponentesPage />} />
             <Route path=":props" element={<Props />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<PrivateRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
           <Route path="*" element={<Error404 />} />
           {/* El error siempre va posicionado último por tema cascada */}
